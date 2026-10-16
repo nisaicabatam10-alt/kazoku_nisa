@@ -1,0 +1,671 @@
+
+/* =========================
+   1. PENGATURAN DASAR
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff5f7;
+    color: #59434b;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* =========================
+   2. HEADER
+========================= */
+.header {
+    min-height: 160px;
+    background-image: url("foto/bc2.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 0 0 35px 35px;
+    overflow: hidden;
+}
+
+.header h1 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    color: #713e54;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px white;
+}
+
+.header p {
+    font-size: 15px;
+    color: #704e5d;
+    text-shadow: 1px 1px 3px white;
+    line-height: 1.6;
+}
+
+/* =========================
+   3. BAGIAN DIAGRAM
+========================= */
+.diagram {
+    width: 100%;
+    padding: 35px 20px;
+    text-align: center;
+    background: #fff5f7;
+}
+
+.diagram h2 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    color: #9b5875;
+    margin-bottom: 25px;
+}
+
+/* Orang tua */
+.orangtua {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0;
+    margin-bottom: 0;
+}
+
+/* Anak-anak: tiga kolom sejajar */
+.anak-anak {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0;
+    margin-top: 0;
+    position: relative;
+}
+
+/* =========================
+   4. CARD KELUARGA
+========================= */
+.anggota {
+    width: 320px;
+    min-width: 0;
+    min-height: 220px;
+    flex-shrink: 1;
+    padding: 15px;
+    border: 3px solid #f3cddd;
+    border-radius: 22px;
+    box-shadow: 0 5px 15px rgba(150, 80, 110, 0.15);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 13px;
+    position: relative;
+}
+
+.anggota:hover {
+    transform: translateY(-4px);
+}
+
+.anggota img {
+    width: 110px;
+    height: 150px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.detail {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+}
+
+.anggota h3 {
+    font-size: 21px;
+    color: #a65378;
+    margin-bottom: 5px;
+    overflow-wrap: anywhere;
+}
+
+.anggota h4 {
+    font-size: 14px;
+    font-weight: normal;
+    color: #704e5d;
+    margin-top: 5px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+/* =========================
+   5. INFORMASI ANGGOTA
+========================= */
+.info {
+    margin-top: 12px;
+    text-align: left;
+    border-top: 1px solid #f1d1dd;
+    padding-top: 12px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.ikon {
+    min-width: 24px;
+    font-size: 18px;
+}
+
+.info-item p {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 4px;
+    overflow-wrap: anywhere;
+}
+
+.info-item .label {
+    color: #92536e;
+    font-weight: bold;
+}
+
+.info-item .isi {
+    color: #59434b;
+}
+
+/* =========================
+   6. TOMBOL PERKENALAN
+========================= */
+.btn-deskripsi {
+    display: inline-block;
+    max-width: 100%;
+    background-color: #fff7fa;
+    color: #a65378;
+    border: 1px solid #dba9bd;
+    border-radius: 20px;
+    padding: 9px 14px;
+    margin-top: 12px;
+    font-size: 13px;
+    line-height: 1.4;
+    cursor: pointer;
+    overflow-wrap: anywhere;
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
+}
+
+.btn-deskripsi:hover {
+    background-color: #a65378;
+    color: white;
+}
+
+/* =========================
+   7. WARNA PUZZLE KELUARGA
+========================= */
+
+/* Ayah */
+.orangtua .anggota:first-child {
+    background-color: #F8D7E5;
+    border-color: #E8AFC7;
+}
+
+/* Ibu */
+.orangtua .anggota:last-child {
+    background-color: #DCE8FF;
+    border-color: #AFC6F5;
+}
+
+/* Anak pertama */
+.anak-anak .anggota:nth-child(1) {
+    background-color: #FFE6B8;
+    border-color: #EAC77F;
+}
+
+/* Anak kedua */
+.anak-anak .anggota:nth-child(2) {
+    background-color: #D9F0DF;
+    border-color: #A8D6B5;
+}
+
+/* Anak ketiga */
+.anak-anak .anggota:nth-child(3) {
+    background-color: #E7DDFB;
+    border-color: #C1AFE9;
+}
+
+/* =========================
+   8. LEKUKAN PUZZLE
+   KODE ASLI KAMU
+========================= */
+
+.orangtua .anggota {
+    position: relative;
+    overflow: visible;
+}
+
+.anak-anak {
+    position: relative;
+}
+
+/* Lekukan puzzle Ayah */
+.orangtua .anggota:first-child {
+    position: relative;
+    overflow: visible;
+}
+
+.orangtua .anggota:first-child::after {
+    content: "";
+    position: absolute;
+    width: 48px;
+    height: 36px;
+    bottom: -30px;
+    right: 70%;
+    background: #F8D7E5;
+    border: 3px solid #E8AFC7;
+    border-top: none;
+    border-radius: 50%;
+    z-index: 3;
+    pointer-events: none;
+}
+
+/* Tonjolan puzzle anak kedua */
+.anak-anak .anggota:nth-child(2) {
+    position: relative;
+    overflow: visible;
+}
+
+.anak-anak .anggota:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    top: -30px;
+    left: 10%;
+    background: #D9F0DF;
+    border: 3px solid #A8D6B5;
+    border-bottom: none;
+    border-radius: 50%;
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* Lekukan puzzle Ibu */
+.orangtua .anggota:last-child {
+    position: relative;
+    overflow: visible;
+}
+
+.orangtua .anggota:last-child::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    bottom: -30px;
+    left: 15%;
+    background: #DCE8FF;
+    border: 3px solid #AFC6F5;
+    border-top: none;
+    border-radius: 50%;
+    z-index: 3;
+    pointer-events: none;
+}
+
+/* Tonjolan anak ketiga di kiri atas */
+.anak-anak .anggota:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    top: -30px;
+    left: 22%;
+    background: #E7DDFB;
+    border: 3px solid #C1AFE9;
+    border-bottom: none;
+    border-radius: 50%;
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* =========================
+   9. DESKRIPSI KELUARGA
+========================= */
+.deskripsi {
+    width: calc(100% - 40px);
+    max-width: 750px;
+    margin: 65px auto 40px;
+    padding: 30px 35px;
+    background: linear-gradient(135deg, #fff5f8, #fffafd);
+    border: 2px solid #f0c4d5;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(190, 120, 150, 0.12);
+    text-align: center;
+}
+
+.deskripsi h2 {
+    color: #a64d72;
+    font-size: 27px;
+    line-height: 1.7;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.deskripsi h4 {
+    color: #b77b92;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    overflow-wrap: anywhere;
+}
+
+.deskripsi p {
+    color: #654b56;
+    font-size: 16px;
+    line-height: 2;
+    margin: 15px 0;
+    overflow-wrap: anywhere;
+}
+
+.deskripsi p:first-of-type {
+    color: #75465a;
+    font-size: 17px;
+    line-height: 2;
+    padding: 16px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 15px;
+}
+
+.deskripsi p:last-of-type {
+    font-size: 14px;
+    color: #92727f;
+    font-style: italic;
+    border-top: 1px dashed #e8bfd0;
+    padding-top: 15px;
+}
+
+/* =========================
+   10. TABLET / LAPTOP KECIL
+========================= */
+@media (min-width: 601px) and (max-width: 1050px) {
+    .diagram {
+        padding: 30px 12px;
+    }
+
+    .anggota {
+        width: 30vw;
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .anggota img {
+        width: 95px;
+        height: 135px;
+    }
+
+    .anggota h3 {
+        font-size: 19px;
+    }
+
+    .anggota h4 {
+        font-size: 13px;
+    }
+
+    .btn-deskripsi {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+}
+
+/* =========================
+   11. TAMPILAN HP
+========================= */
+@media (max-width: 600px) {
+    .header {
+        min-height: 135px;
+        padding: 20px 12px;
+        border-radius: 0 0 25px 25px;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+    .header p {
+        font-size: 13px;
+    }
+
+    .diagram {
+        padding: 25px 8px;
+        overflow: visible;
+    }
+
+    .diagram h2 {
+        font-size: 22px;
+        margin-bottom: 22px;
+    }
+
+    /* Orang tua: dua kolom */
+    .orangtua {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    /* Anak: tiga kolom */
+    .anak-anak {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 5px;
+    }
+
+    .anggota {
+        width: 100%;
+        min-width: 0;
+        min-height: 0;
+        padding: 7px;
+        gap: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        border-width: 2px;
+        border-radius: 13px;
+    }
+
+    .anggota img {
+        display: block;
+        width: 100%;
+        height: 105px;
+        flex-shrink: 0;
+        object-fit: cover;
+        border-radius: 9px;
+        margin-bottom: 8px;
+    }
+
+    .detail {
+        width: 100%;
+        min-width: 0;
+        text-align: center;
+    }
+
+    .anggota h3 {
+        font-size: 15px;
+        line-height: 1.4;
+        margin-bottom: 4px;
+    }
+
+    .anggota h4 {
+        font-size: 11px;
+        line-height: 1.5;
+        margin-top: 4px;
+    }
+
+    .btn-deskripsi {
+        display: block;
+        width: 100%;
+        padding: 7px 2px;
+        margin-top: 8px;
+        font-size: 10px;
+        line-height: 1.4;
+        white-space: normal;
+    }
+
+    .info {
+        margin-top: 9px;
+        padding-top: 8px;
+    }
+
+    .info-item {
+        gap: 5px;
+    }
+
+    .info-item p {
+        font-size: 10px;
+    }
+
+    .ikon {
+        min-width: 16px;
+        font-size: 13px;
+    }
+
+    /*
+       Puzzle tidak disembunyikan di HP.
+       Bentuk dan arah mengikuti kode asli.
+    */
+    .orangtua .anggota:first-child::after {
+        width: 34px;
+        height: 26px;
+        bottom: -23px;
+        right: 70%;
+    }
+
+    .orangtua .anggota:last-child::before {
+        width: 34px;
+        height: 24px;
+        bottom: -22px;
+        left: 15%;
+    }
+
+    .anak-anak .anggota:nth-child(2)::after {
+        width: 32px;
+        height: 23px;
+        top: -22px;
+        left: 10%;
+    }
+
+    .anak-anak .anggota:nth-child(3)::before {
+        width: 32px;
+        height: 23px;
+        top: -22px;
+        left: 22%;
+    }
+
+    .deskripsi {
+        width: calc(100% - 16px);
+        margin: 30px auto 25px;
+        padding: 22px 14px;
+        border-radius: 20px;
+    }
+
+    .deskripsi h2 {
+        font-size: 21px;
+        line-height: 1.6;
+        letter-spacing: 0;
+    }
+
+    .deskripsi h4 {
+        font-size: 12px;
+        line-height: 1.7;
+        margin-bottom: 18px;
+    }
+
+    .deskripsi p {
+        font-size: 13px;
+        line-height: 1.9;
+        text-align: center;
+    }
+
+    .deskripsi p:first-of-type {
+        font-size: 14px;
+        line-height: 1.9;
+        padding: 12px 9px;
+    }
+
+    .deskripsi p:last-of-type {
+        font-size: 11px;
+        padding-top: 12px;
+    }
+}
+
+/* =========================
+   12. HP SANGAT KECIL
+========================= */
+@media (max-width: 360px) {
+    .header h1 {
+        font-size: 26px;
+    }
+
+    .diagram {
+        padding-right: 6px;
+        padding-left: 6px;
+    }
+
+    .orangtua {
+        gap: 8px;
+    }
+
+    .anak-anak {
+        gap: 4px;
+    }
+
+    .anggota {
+        padding: 5px;
+        border-radius: 11px;
+    }
+
+    .anggota img {
+        height: 90px;
+    }
+
+    .anggota h3 {
+        font-size: 13px;
+    }
+
+    .anggota h4 {
+        font-size: 10px;
+    }
+
+    .btn-deskripsi {
+        font-size: 9px;
+        padding: 6px 1px;
+    }
+}
+
+/* Anak tetap tiga kolom pada HP kecil */
+@media (max-width: 300px) {
+    .orangtua {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .anak-anak {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .anggota {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+
+    .anggota img {
+        height: 75px;
+    }
+}

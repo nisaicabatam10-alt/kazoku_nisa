@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kazoku</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>かぞく</h1>
+        <p>Kazoku</p>
+    </header>
+
+    <main class="diagram">
+        <h2>わたしたちの かぞく</h2>
+
+        <!-- BAGIAN ORANG TUA -->
+        <div class="orangtua">
+
+            <!-- AYAH: BAJU MERAH -->
+            <div class="anggota">
+                <img src="foto/ayah.jpeg" alt="Foto Ayah">
+
+                <div class="detail">
+                    <h3>ちち</h3>
+                    <h4>chichi</h4>
+
+                    <button class="btn-deskripsi"
+                        onclick="toggleDeskripsi(this)">
+                        しょうかい
+                    </button>
+
+                    <div class="deskripsi-lengkap" style="display: none;">
+                        <p>あかい ふくを きている ひとは ちちです。かっこよくて、やさしいです。</p>
+                        <p>Romaji: Akai fuku o kite iru hito wa chichi desu. Kakkoyokute, yasashii desu.</p>
+                        <p>Arti: Orang yang memakai baju merah itu ayah. Dia keren dan baik hati.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IBU: BAJU KUNING -->
+            <div class="anggota">
+                <img src="foto/mak.png" alt="Foto Ibu">
+
+                <div class="detail">
+                    <h3>はは</h3>
+                    <h4>haha</h4>
+
+                    <button class="btn-deskripsi"
+                        onclick="toggleDeskripsi(this)">
+                        しょうかい
+                    </button>
+
+                    <div class="deskripsi-lengkap" style="display: none;">
+                        <p>きいろい ふくを きている ひとは ははです。きれいで、がまんづよいです。</p>
+                        <p>Romaji: Kiiroi fuku o kite iru hito wa haha desu. Kirei de, gamanzuyoi desu.</p>
+                        <p>Arti: Orang yang memakai baju kuning itu ibu. Dia cantik dan sabar.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- BAGIAN ANAK-ANAK -->
+        <div class="anak-anak">
+
+            <!-- ANAK PERTAMA: AKU, BAJU PINK -->
+            <div class="anggota">
+                <img src="foto/me.png" alt="Foto Aku">
+
+                <div class="detail">
+                    <h3>わたし</h3>
+                    <h4>watashi</h4>
+
+                    <button class="btn-deskripsi"
+                        onclick="toggleDeskripsi(this)">
+                        しょうかい
+                    </button>
+
+                    <div class="deskripsi-lengkap" style="display: none;">
+                        <p>ピンクの ふくを きている ひとは わたしです。かわいくて、あかるいです。</p>
+                        <p>Romaji: Pinku no fuku o kite iru hito wa watashi desu. Kawaikute, akarui desu.</p>
+                        <p>Arti: Orang yang memakai baju pink itu aku. Aku cantik dan ceria.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ANAK KEDUA: BAJU COKELAT -->
+            <div class="anggota">
+                <img src="foto/imam.png" alt="Foto Adik Pertama">
+
+                <div class="detail">
+                    <h3>おとうと</h3>
+                    <h4>otouto</h4>
+
+                    <button class="btn-deskripsi"
+                        onclick="toggleDeskripsi(this)">
+                        しょうかい
+                    </button>
+
+                    <div class="deskripsi-lengkap" style="display: none;">
+                        <p>ちゃいろの ふくを きている ひとは いちばんめの おとうとです。がまんづよくて、あたまがいいです。</p>
+                        <p>Romaji: Chairo no fuku o kite iru hito wa ichibanme no otouto desu. Gamanzuyokute, atama ga ii desu.</p>
+                        <p>Arti: Orang yang memakai baju cokelat itu adik laki-lakiku yang pertama. Dia penyabar dan pintar.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ANAK KETIGA: BAJU PUTIH -->
+            <div class="anggota">
+                <img src="foto/nafi.png" alt="Foto Adik Kedua">
+
+                <div class="detail">
+                    <h3>おとうと</h3>
+                    <h4>otouto</h4>
+
+                    <button class="btn-deskripsi"
+                        onclick="toggleDeskripsi(this)">
+                        しょうかい
+                    </button>
+
+                    <div class="deskripsi-lengkap" style="display: none;">
+                        <p>しろい ふくを きている ひとは おとうとです。かっこよくて、おしゃべりです。</p>
+                        <p>Romaji: Shiroi fuku o kite iru hito wa otouto desu. Kakkoyokute, oshaberi desu.</p>
+                        <p>Arti: Orang yang memakai baju putih itu adik laki-lakiku. Dia ganteng dan cerewet.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+
+<section class="deskripsi">
+    <h2>これは わたしの かぞくです。</h2>
+    <h4>Kore wa watashi no kazoku desu.</h4>
+
+    <p>
+        わたしの かぞくは ごにんです。
+        わたしと ちちと ははと おとうとが ふたりいます。
+        わたしは さんきょうだいの いちばんうえです。
+    </p>
+
+    <p>
+        Watashi no kazoku wa gonin desu.
+        Watashi to chichi to haha to otouto ga futari imasu.
+        Watashi wa sankyoudai no ichiban ue desu.
+    </p>
+</section>
+
+
+    <script>
+        function toggleDeskripsi(button) {
+            const deskripsi = button.nextElementSibling;
+
+            if (deskripsi.style.display === "none") {
+                deskripsi.style.display = "block";
+                button.textContent = "とじる";
+            } else {
+                deskripsi.style.display = "none";
+                button.textContent = "♡ しょうかい";
+            }
+        }
+    </script>
+
+</body>
+</html>
